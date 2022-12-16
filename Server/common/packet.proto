@@ -1,0 +1,25 @@
+syntax="proto3";
+package runio;
+
+option csharp_namespace = "Chan.Proto.Run";
+
+enum MSGID{
+    CMOVE= 0;
+    SMOVE = 1;
+}
+
+message PlayerInfo{
+    int32 playerId =1;
+    string name = 2;
+    Position position = 3;
+}
+
+message Position{
+    float x = 1;
+    float y = 2;
+    float rotate = 3;
+}
+
+message CMove{
+    Position position = 1;
+}
